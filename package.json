@@ -1,0 +1,17 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "description": "Implementation of the CLI tool that encodes and decodes the text by Caesar's cipher",
+  "main": "index.js",
+  "repository": "git@github.com:Deeamon/caesar-cipher.git",
+  "author": "Deeamon <marinasugutova@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Deeamon/caesar-cipher/issues"
+  },
+  "homepage": "https://github.com/Deeamon/caesar-cipher#readme",
+  "dependencies": {},
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
