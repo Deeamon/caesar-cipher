@@ -1,0 +1,30 @@
+[
+  {
+    "shift": {
+      "alias": "-s",
+      "full": "--shift",
+      "isRequired": true
+    }
+  },
+  {
+    "input": {
+      "alias": "-i",
+      "full": "--input",
+      "isRequired": false
+    }
+  },
+  {
+    "output": {
+      "alias": "-o",
+      "full": "--output",
+      "isRequired": false
+    }
+  },
+  {
+    "action": {
+      "alias": "-a",
+      "full": "--action",
+      "isRequired": true
+    }
+  }
+]
