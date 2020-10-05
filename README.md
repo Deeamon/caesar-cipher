@@ -10,7 +10,7 @@ CLI tool that will encode and decode a text (only English alphabet) by Caesar ci
 
 ##  How to use:
 
-To To run program write: `src/index.js <option>`
+To run program write: `src/index.js <option>`
 
 Available options:
 - -s, --shift: a number of character to cipher
