@@ -10,8 +10,10 @@
     "url": "https://github.com/Deeamon/caesar-cipher/issues"
   },
   "homepage": "https://github.com/Deeamon/caesar-cipher#readme",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js -a encode --shift 2"
   }
 }
