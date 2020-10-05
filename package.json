@@ -14,6 +14,9 @@
     "chalk": "^4.1.0"
   },
   "scripts": {
-    "start": "node src/index.js -a encode --shift 2"
+    "encode": "node src/index.js -a encode --shift 2",
+    "decode": "node src/index.js -a decode --shift 2",
+    "encode:file": "node src/index.js -a encode --shift 2 --input ./input.txt --output ./output.txt",
+    "decode:file": "node src/index.js -a decode --shift 2 --input ./input.txt --output ./output.txt"
   }
 }
