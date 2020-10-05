@@ -2,6 +2,7 @@ const fs = require('fs');
 const stream = require('stream');
 const { pipeline } = require('stream');
 const chalk = require('chalk');
+const { comandInParse, parseCmdV } = require('./utils/utils');
 
 const optionsList = require('./utils/commandOptions.json');
 const caesarCipher = require('./utils/caesarCipher');
@@ -9,29 +10,7 @@ const caesarCipher = require('./utils/caesarCipher');
 const errChalk = chalk.red.bold;
 const instChalk = chalk.blue.bold;
 
-const parseCmdOptions = () => {
-  const optionsRaw = process.argv.slice(2);
-  const commands = optionsRaw.map((option, index) => {
-    const isOptionExist = optionsList.filter(
-      (o) => o.alias === option || o.full === option
-    );
-    return isOptionExist.length
-      ? {
-          option,
-          value: optionsRaw[index + 1],
-        }
-      : null;
-  });
-
-  return commands.filter((el) => el !== null);
-};
-const parse = parseCmdOptions();
-
-const comandInParse = (parseCmd, optionCmd) => {
-  return parseCmd.find(({ option }) =>
-    Object.values(optionCmd).includes(option)
-  );
-};
+const parse = parseCmdV();
 
 const shift = optionsList[0];
 const input = optionsList[1];
