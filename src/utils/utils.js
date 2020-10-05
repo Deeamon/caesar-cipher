@@ -1,5 +1,5 @@
 const chalk = require('chalk');
-const optionsList = require('./commandOptions.json');
+const optionsList = require('../config/commandOptions.json');
 const errChalk = chalk.red.bold;
 
 const comandInParse = (parseCmd, optionCmd) => {
