@@ -1,0 +1,22 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "description": "Implementation of the CLI tool that encodes and decodes the text by Caesar's cipher",
+  "main": "index.js",
+  "repository": "git@github.com:Deeamon/caesar-cipher.git",
+  "author": "Deeamon <marinasugutova@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Deeamon/caesar-cipher/issues"
+  },
+  "homepage": "https://github.com/Deeamon/caesar-cipher#readme",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "scripts": {
+    "encode": "node src/index.js -a encode --shift 2",
+    "decode": "node src/index.js -a decode --shift 2",
+    "encode:file": "node src/index.js -a encode --shift 2 --input ./input.txt --output ./output.txt",
+    "decode:file": "node src/index.js -a decode --shift 2 --input ./input.txt --output ./output.txt"
+  }
+}

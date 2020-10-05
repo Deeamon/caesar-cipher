@@ -1,0 +1,22 @@
+[
+  {
+    "alias": "-s",
+    "full": "--shift",
+    "isRequired": true
+  },
+  {
+    "alias": "-i",
+    "full": "--input",
+    "isRequired": false
+  },
+  {
+    "alias": "-o",
+    "full": "--output",
+    "isRequired": false
+  },
+  {
+    "alias": "-a",
+    "full": "--action",
+    "isRequired": true
+  }
+]
