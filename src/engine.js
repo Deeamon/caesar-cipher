@@ -40,7 +40,21 @@ const action = optionsList[3];
 
 const readText = () => {
   if (comandInParse(parse, input)) {
-    //logic for file
+    const filePathInput = comandInParse(parse, input).value;
+    return new Promise((res, rej) => {
+      fs.access(filePathInput, (err) => {
+        if (err) {
+          process.stderr.write(
+            errChalk(
+              `Сannot find the file in path: "${filePathInput}" or it has no read rights :С \n`
+            )
+          );
+          process.exit(453);
+        }
+
+        res(fs.createReadStream(filePathInput));
+      });
+    });
   } else {
     console.log(
       instChalk(`Write text to ${comandInParse(parse, action).value}...`)
@@ -66,7 +80,22 @@ const transformText = () => {
 
 const writeText = () => {
   if (comandInParse(parse, output)) {
-    //logic for output file
+    const filePathOutput = comandInParse(parse, output).value;
+
+    return new Promise((res, rej) => {
+      fs.access(filePathOutput, (err) => {
+        if (err) {
+          process.stderr.write(
+            errChalk(
+              `Сannot find the file in path: "${filePathOutput}" or it has no read rights :С \n`
+            )
+          );
+          process.exit(453);
+        }
+
+        res(fs.createWriteStream(filePathOutput));
+      });
+    });
   } else {
     return process.stdout;
   }
