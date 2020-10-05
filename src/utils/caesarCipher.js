@@ -29,21 +29,19 @@ const decode = (symbol, shift) => {
 const caesarCipher = (text, shift, action) => {
   const textArr = text.toString().split('');
 
-  return (
-    textArr
-      .map((symbol) => {
-        if (!arrayOfSymbols.includes(symbol.toLowerCase())) return;
+  return textArr
+    .map((symbol) => {
+      if (!arrayOfSymbols.includes(symbol.toLowerCase())) return symbol;
 
-        if (action === ENCODE) {
-          return encode(symbol, shift);
-        }
+      if (action === ENCODE) {
+        return encode(symbol, shift);
+      }
 
-        if (action === DECODE) {
-          return decode(symbol, shift);
-        }
-      })
-      .join('') + '\n'
-  );
+      if (action === DECODE) {
+        return decode(symbol, shift);
+      }
+    })
+    .join('');
 };
 
 module.exports = caesarCipher;
